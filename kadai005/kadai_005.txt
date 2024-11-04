@@ -1,0 +1,45 @@
+ogurat01:~ ogurat$ cd /Users/ogurat/Desktop
+ogurat01:Desktop ogurat$ mkdir git_challenge
+ogurat01:Desktop ogurat$ cd git_challenge
+ogurat01:git_challenge ogurat$ git init
+Initialized empty Git repository in /Users/ogurat/Desktop/git_challenge/.git/
+ogurat01:git_challenge ogurat$ echo 'hello, world!' >> hello_world.txt
+ogurat01:git_challenge ogurat$ git add hello_world.txt
+ogurat01:git_challenge ogurat$ git diff --staged
+diff --git a/hello_world.txt b/hello_world.txt
+new file mode 100644
+index 0000000..270c611
+--- /dev/null
++++ b/hello_world.txt
+@@ -0,0 +1 @@
++hello, world!
+ogurat01:git_challenge ogurat$ git commit -m "hello_world.txtを追加"
+[main (root-commit) 703fb7e] hello_world.txtを追加
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+ogurat01:git_challenge ogurat$ git diff
+diff --git a/hello_world.txt b/hello_world.txt
+index 270c611..5d6755b 100644
+--- a/hello_world.txt
++++ b/hello_world.txt
+@@ -1 +1,2 @@
+ hello, world!
++こんにちは、世界！
+\ No newline at end of file
+ogurat01:git_challenge ogurat$ git add .
+ogurat01:git_challenge ogurat$ git diff
+ogurat01:git_challenge ogurat$ git diff --staged
+diff --git a/hello_world.txt b/hello_world.txt
+index 270c611..5d6755b 100644
+--- a/hello_world.txt
++++ b/hello_world.txt
+@@ -1 +1,2 @@
+ hello, world!
++こんにちは、世界！
+\ No newline at end of file
+ogurat01:git_challenge ogurat$ git commit -m "日本語訳を追記"
+[main bb224b0] 日本語訳を追記
+ 1 file changed, 1 insertion(+)
+ogurat01:git_challenge ogurat$ git log --oneline
+bb224b0 (HEAD -> main) 日本語訳を追記
+703fb7e hello_world.txtを追加
